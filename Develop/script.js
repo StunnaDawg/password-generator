@@ -9,7 +9,7 @@ function generatePassword() {
   passwordUppercase();
   passwordNumeric();
   passwordSpecial();
-} 
+  }
 
 /* password length function that will ask how many characters you want in your password */
 function passwordLength() {
@@ -36,9 +36,11 @@ function passwordLowercase () {
     userInput = userInput.toString().toLowerCase()
     if (userInput === 'y') {
       alert('lower case will be included')
+      return userInput;
       break;
     } else if (userInput === 'n') {
       alert('lower case will not be included')
+      return userInput;
       break;
     } else {
       alert('Invalid input. Please enter y or n')
@@ -55,9 +57,11 @@ function passwordUppercase() {
     userInput = userInput.toString().toLowerCase()
     if (userInput === 'y') {
       alert('upper case will be included')
+      return userInput;
       break;
     } else if (userInput === 'n') {
       alert('upper case will not be included')
+      return userInput;
       break;
     } else {
       alert('Invalid input. Please enter y or n')
@@ -73,9 +77,11 @@ function passwordNumeric() {
     userInput = userInput.toString().toLowerCase()
     if (userInput === 'y') {
       alert('numeric characters will be included')
+      return userInput;
       break;
     } else if (userInput === 'n') {
       alert('numeric characters will not be included')
+      return userInput;
       break;
     } else {
       alert('Invalid input. Please enter y or n')
@@ -91,9 +97,11 @@ function passwordSpecial() {
     userInput = userInput.toString().toLowerCase()
     if (userInput === 'y') {
       alert('special characters will be included')
+      return userInput;
       break;
     } else if (userInput === 'n') {
       alert('special characters will not be included')
+      return userInput;
       break;
     } else {
       alert('Invalid input. Please enter y or n')
