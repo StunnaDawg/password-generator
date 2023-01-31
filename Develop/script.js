@@ -4,12 +4,13 @@ var generateBtn = document.querySelector("#generate"); //assigns generateBtn on 
 function generatePassword() {
   alert('What password criteria');
   alert('Character Types');
-  passwordLength();
-  passwordLowercase();
-  passwordUppercase();
-  passwordNumeric();
-  passwordSpecial();
-  }
+  
+  let lowerCase = passwordLowercase();
+  let upperCase = passwordUppercase();
+  let numeric = passwordNumeric();
+  let special = passwordSpecial();
+
+}
 
 /* password length function that will ask how many characters you want in your password */
 function passwordLength() {
@@ -20,7 +21,7 @@ function passwordLength() {
   // for loop, loops till input == i
   if (userInput >= 8 && userInput <= 128) {
   for (let i = 8; i <= userInput; i++) {
-    console.log(userInput)
+    return (userInput);
   } break;
 } else {
   alert ("Invalid input. Choose a number between 8 and 128.")
@@ -28,6 +29,22 @@ function passwordLength() {
 }
 }
 
+
+function generatePasswordLength() {
+  let length = passwordLength();
+  const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length
+  let counter = 0
+  let result = ''
+ while (counter <= length) {
+  result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+ }
+    console.log(result)
+ }
+// generate a string of random characters at the length that is chosen
+
+generatePasswordLength();
 //lowercase characters?
 
 function passwordLowercase () {
