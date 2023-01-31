@@ -4,11 +4,41 @@ var generateBtn = document.querySelector("#generate"); //assigns generateBtn on 
 function generatePassword() {
   alert('What password criteria');
   alert('Character Types');
-  
+  let characters = ''
+  let length = passwordLength();
   let lowerCase = passwordLowercase();
   let upperCase = passwordUppercase();
   let numeric = passwordNumeric();
   let special = passwordSpecial();
+  let result = ''
+
+
+  if (lowerCase== 'y') {
+  characters += 'abcdefghijklmnopqrstuvwxyz'
+}
+
+if (upperCase == 'y') {
+  characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+}
+
+if (numeric == 'y') {
+  characters += '0123456789'
+}
+
+if (special == 'y') {
+  characters += '!@#$%^&*?'
+}
+    
+    function generatePasswordLength() {
+        const charactersLength = characters.length
+        let counter = 0
+        while (counter <= length) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        counter += 1;
+   }
+      console.log(result)
+   }
+generatePasswordLength();
 
 }
 
@@ -29,22 +59,6 @@ function passwordLength() {
 }
 }
 
-
-function generatePasswordLength() {
-  let length = passwordLength();
-  const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const charactersLength = characters.length
-  let counter = 0
-  let result = ''
- while (counter <= length) {
-  result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      counter += 1;
- }
-    console.log(result)
- }
-// generate a string of random characters at the length that is chosen
-
-generatePasswordLength();
 //lowercase characters?
 
 function passwordLowercase () {
