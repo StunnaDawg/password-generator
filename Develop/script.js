@@ -50,19 +50,55 @@ function passwordLowercase () {
 //upper case letters? 
 
 function passwordUppercase() {
-  prompt('Do you want upper case letters? y = yes & n = no')
+  while (true) {
+    let userInput = prompt('Do you want upper case letters? y = yes & n = no')
+    userInput = userInput.toString().toLowerCase()
+    if (userInput === 'y') {
+      alert('upper case will be included')
+      break;
+    } else if (userInput === 'n') {
+      alert('upper case will not be included')
+      break;
+    } else {
+      alert('Invalid input. Please enter y or n')
+    }
+  }
 }
 
 // numeric characters?
 
 function passwordNumeric() {
-  prompt('Do you want numeric characters? y = yes & n = no')
+  while (true) {
+    let userInput = prompt('Do you want numeric characters? y = yes & n = no')
+    userInput = userInput.toString().toLowerCase()
+    if (userInput === 'y') {
+      alert('numeric characters will be included')
+      break;
+    } else if (userInput === 'n') {
+      alert('numeric characters will not be included')
+      break;
+    } else {
+      alert('Invalid input. Please enter y or n')
+    }
+  }
 }
 
 //Do you want special characters? 
 
 function passwordSpecial() {
-  prompt('Do you want special characters? y = yes & n = no')
+  while (true) {
+    let userInput = prompt('Do you want special characters? y = yes & n = no')
+    userInput = userInput.toString().toLowerCase()
+    if (userInput === 'y') {
+      alert('special characters will be included')
+      break;
+    } else if (userInput === 'n') {
+      alert('special characters will not be included')
+      break;
+    } else {
+      alert('Invalid input. Please enter y or n')
+    }
+  }
 }
 // Write password to the #password input
 function writePassword() {
