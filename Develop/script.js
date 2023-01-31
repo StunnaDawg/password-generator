@@ -13,14 +13,14 @@ function generatePassword() {
 
 /* password length function that will ask how many characters you want in your password */
 function passwordLength() {
-  // while true keeps the function looping until the question is answered correctly
+  // while true keeps the function looping until the question is answered corre
   while (true) {
   let userInput= prompt('Password length. Choose between 8 - 128')
   userInput = parseInt(userInput)
   // for loop, loops till input == i
   if (userInput >= 8 && userInput <= 128) {
   for (let i = 8; i <= userInput; i++) {
-    console.log()
+    console.log(userInput)
   } break;
 } else {
   alert ("Invalid input. Choose a number between 8 and 128.")
@@ -31,8 +31,21 @@ function passwordLength() {
 //lowercase characters?
 
 function passwordLowercase () {
-  prompt('Do you want lower case letters? y = yes & n = no')
-}
+  while (true) {
+    let userInput = prompt('Do you want lower case letters? y = yes & n = no')
+    userInput = userInput.toString().toLowerCase()
+    if (userInput === 'y') {
+      alert('lower case will be included')
+      break;
+    } else if (userInput === 'n') {
+      alert('lower case will not be included')
+      break;
+    } else {
+      alert('Invalid input. Please enter y or n')
+    }
+  }
+  }
+
 
 //upper case letters? 
 
