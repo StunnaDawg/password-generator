@@ -15,20 +15,30 @@ function generatePassword() {
 
   if (lowerCase== 'y') {
   characters += 'abcdefghijklmnopqrstuvwxyz'
+  result += 'abcdefghijklmnopqrstuvwxyz'.charAt(Math.floor(Math.random() * 26)); //result += makes sure that 1 of each character is added within the function
 }
 
 if (upperCase == 'y') {
   characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(Math.floor(Math.random() * 26));
 }
 
 if (numeric == 'y') {
   characters += '0123456789'
+  result += '0123456789'.charAt(Math.floor(Math.random() * 10));
 }
 
 if (special == 'y') {
-  characters += '!@#$%^&*?'
+  characters += '!@#$%^&*?-'
+  result += '!@#$%^&*?-'.charAt(Math.floor(Math.random() * 13));
 }
-    
+
+if (special == 'y' )
+
+if (lowerCase == 'n' && upperCase == 'n' && numeric == 'n' && special == 'n') {
+  alert('At least 1 charcter type should be selected. PLEASE TRY AGAIN.')
+}
+
     function generatePasswordLength() {
         const charactersLength = characters.length
         let counter = 0
@@ -36,9 +46,17 @@ if (special == 'y') {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
         counter += 1;
    }
-      console.log(result)
+
+      result = result.slice(0, length); //removes 4 random string characters
    }
 generatePasswordLength();
+
+   function randomizeResult(result) {
+    result = result.split('').sort(function(){return 0.5-Math.random()}).join('');
+    return(result);
+  }
+  
+  result = randomizeResult(result);
 
 return(result);
 }
