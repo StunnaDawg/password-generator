@@ -40,6 +40,7 @@ if (special == 'y') {
    }
 generatePasswordLength();
 
+return(result);
 }
 
 /* password length function that will ask how many characters you want in your password */
