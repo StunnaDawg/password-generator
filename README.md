@@ -17,7 +17,7 @@ You will need a browser installed on your local machine to run this application.
 
 ## Deployed Link
 
-https://stunnadawg.github.io/password-generator/
+https://stunnadawg.github.io/password-generator/Develop/index.html
 
 ## Screenshot
 
