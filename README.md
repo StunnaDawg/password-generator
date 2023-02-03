@@ -15,6 +15,9 @@ You will need a browser installed on your local machine to run this application.
 
 3. Open the index.html with your default browser
 
+## Deployed Link
+
+https://stunnadawg.github.io/password-generator/
 
 ## Screenshot
 
