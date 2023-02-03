@@ -12,10 +12,11 @@ function generatePassword() {
   let special = passwordSpecial();
   let result = ''
 
-
+//result += makes sure that 1 of each character is added within the function
+//characters + adds its corresponding characters to the string
   if (lowerCase== 'y') {
   characters += 'abcdefghijklmnopqrstuvwxyz'
-  result += 'abcdefghijklmnopqrstuvwxyz'.charAt(Math.floor(Math.random() * 26)); //result += makes sure that 1 of each character is added within the function
+  result += 'abcdefghijklmnopqrstuvwxyz'.charAt(Math.floor(Math.random() * 26)); 
 }
 
 if (upperCase == 'y') {
@@ -30,13 +31,7 @@ if (numeric == 'y') {
 
 if (special == 'y') {
   characters += '!@#$%^&*?-'
-  result += '!@#$%^&*?-'.charAt(Math.floor(Math.random() * 13));
-}
-
-if (special == 'y' )
-
-if (lowerCase == 'n' && upperCase == 'n' && numeric == 'n' && special == 'n') {
-  alert('At least 1 charcter type should be selected. PLEASE TRY AGAIN.')
+  result += '!@#$%&*?-'.charAt(Math.floor(Math.random() * 9));
 }
 
     function generatePasswordLength() {
@@ -49,7 +44,13 @@ if (lowerCase == 'n' && upperCase == 'n' && numeric == 'n' && special == 'n') {
 
       result = result.slice(0, length); //removes 4 random string characters
    }
-generatePasswordLength();
+   generatePasswordLength();
+
+
+   if (lowerCase == 'n' && upperCase == 'n' && numeric == 'n' && special == 'n') {
+    alert('At least 1 charcter type should be selected. PLEASE TRY AGAIN.')
+   }
+//randomized the result so that the 1st few characters arent in the same order every time
 
    function randomizeResult(result) {
     result = result.split('').sort(function(){return 0.5-Math.random()}).join('');
@@ -61,7 +62,7 @@ generatePasswordLength();
 return(result);
 }
 
-/* password length function that will ask how many characters you want in your password */
+// password length function that will ask how many characters you want in your password 
 function passwordLength() {
   // while true keeps the function looping until the question is answered corre
   while (true) {
@@ -78,7 +79,9 @@ function passwordLength() {
 }
 }
 
-//lowercase characters?
+//lowercase, uppercase, numeric, and special chaarcters all utilize the same function
+// They ask whether the user wants their corresponding characters to be added
+//while (true) makes sure the function loops if an incorrect input is given
 
 function passwordLowercase () {
   while (true) {
