@@ -2,8 +2,7 @@
 var generateBtn = document.querySelector("#generate"); //assigns generateBtn on to the event listener so it is clickable
 
 function generatePassword() {
-  alert('What password criteria');
-  alert('Character Types');
+  alert('Choose your Password Critera!');
   let characters = ''
   let length = passwordLength();
   let lowerCase = passwordLowercase();
@@ -17,22 +16,24 @@ function generatePassword() {
   if (lowerCase== 'y') {
   characters += 'abcdefghijklmnopqrstuvwxyz'
   result += 'abcdefghijklmnopqrstuvwxyz'.charAt(Math.floor(Math.random() * 26)); 
-}
+  }
 
 if (upperCase == 'y') {
   characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(Math.floor(Math.random() * 26));
-}
+  }
 
 if (numeric == 'y') {
   characters += '0123456789'
   result += '0123456789'.charAt(Math.floor(Math.random() * 10));
-}
+  }
 
 if (special == 'y') {
   characters += '!@#$%^&*?-'
-  result += '!@#$%&*?-'.charAt(Math.floor(Math.random() * 9));
-}
+  result += '!@#$%&?-'.charAt(Math.floor(Math.random() * 8));
+  }
+
+//Generates the Passwordlength as well as randomzies it to be outputted
 
     function generatePasswordLength() {
         const charactersLength = characters.length
@@ -42,14 +43,15 @@ if (special == 'y') {
         counter += 1;
    }
 
-      result = result.slice(0, length); //removes 4 random string characters
+      result = result.slice(0, length); //removes 4 random string characters because result+ in the if statements above adds 4 characters to the total
+
+      if (lowerCase == 'n' && upperCase == 'n' && numeric == 'n' && special == 'n') {
+        alert('At least 1 charcter type should be selected. PLEASE TRY AGAIN.')
+   }
    }
    generatePasswordLength();
-
-
-   if (lowerCase == 'n' && upperCase == 'n' && numeric == 'n' && special == 'n') {
-    alert('At least 1 charcter type should be selected. PLEASE TRY AGAIN.')
-   }
+ 
+   
 //randomized the result so that the 1st few characters arent in the same order every time
 
    function randomizeResult(result) {
