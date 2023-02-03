@@ -3,7 +3,7 @@
 ## Description
 
 This project was created for the purpose of generating random passwords. It solves the problem of creating passwords by yourself.
-During the process of the building this porject I learned add a string to an exsiting empty string and then call it. I learned how to randomize strings, and also utilize prompts to gather the users input to trigger an event.
+During the process of the building this project I learned how to add a string to an exsiting empty string and then call it. I learned how to randomize strings, and also utilize prompts to gather the users input to trigger an event.
 
 ## Installation
 
